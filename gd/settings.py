@@ -1,5 +1,8 @@
 # Django settings for gd project.
 
+
+ROOT_PATH = "'/home/kalyany21/kalyanwebhost/gd/"
+# ROOT_PATH = "/media/naresh/Drive F/glass/kalyanwebhost/gd/"
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -49,7 +52,7 @@ USE_L10N = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = '/home/kalyany21/kalyanwebhost/gd/media'
+MEDIA_ROOT = ROOT_PATH + 'media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -60,7 +63,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = '/home/kalyany21/kalyanwebhost/gd/static'
+STATIC_ROOT = ROOT_PATH +  'static'
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -106,7 +109,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'gd.urls'
 
-TEMPLATE_DIRS = (
+TEMPLATE_DIRS = (ROOT_PATH + "templates"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
